@@ -1,6 +1,7 @@
 The members of this group are:
   Adam Casey,
   Brian Caravantes,
-  Jacob Sphatt
+  Jacob Sphatt,
+  Philip Blaskowski
   
 Preliminary Project Idea: Explanatory based project on Oracle DB.
