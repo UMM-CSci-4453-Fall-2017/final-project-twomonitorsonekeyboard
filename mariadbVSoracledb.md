@@ -1,12 +1,32 @@
 # MariaDB vs. OracleDB
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [MariaDB vs. OracleDB](#mariadb-vs-oracledb)
+	- [Advantages of MariaDB](#advantages-of-mariadb)
+	- [Advantages of OracleDB](#advantages-of-oracledb)
+	- [Technical differences](#technical-differences)
+		- [Datatypes unique to each system](#datatypes-unique-to-each-system)
+			- [Maraidb](#maraidb)
+			- [Oracledb](#oracledb)
+		- [Datatypes comparison](#datatypes-comparison)
+			- [Numerics](#numerics)
+			- [Date & Time](#date-time)
+			- [Character Strings](#character-strings)
+			- [Binary Strings](#binary-strings)
+- [Why would one choose OracleDB over MariaDB](#why-would-one-choose-oracledb-over-mariadb)
+
+<!-- /TOC -->
 ## Advantages of MariaDB
+
 * Open Source
 * Support for JSON datatype
 
 ## Advantages of OracleDB
+
 * Supports grid computing
 * Robust security compared to MariaDB
 * Pooling allows companies with a large number of components to really take advantage of them
+* Allows for more in depth server-side through PL/SQL and Java
 ## Technical differences
 ### Datatypes unique to each system
 #### Maraidb
@@ -62,3 +82,4 @@
 
 # Why would one choose OracleDB over MariaDB
 * Better for large companies with lots of resources to utilize (grid computing)
+* More server-side flexibility
