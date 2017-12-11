@@ -195,7 +195,7 @@ SQL> select * from Class;
 **Insert into 'Class'**
 The INSERT statement allows you to insert values into your table which you specify. Insert 4 rows with the specified information into table Class
 ``` SQL
-INSERT INTO Class Values('Grade', 'Name', Id#,);
+INSERT INTO Class Values('Grade', 'Name', Id#);
 ```
 
 **Alter table 'Class'**
