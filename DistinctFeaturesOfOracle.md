@@ -31,6 +31,7 @@ Read some of the benefits that are produced by it.
     * PDB1 :no_entry_sign: PDB2: This also means that a user who only has access to a certain PDB1 will/cant have access to PDB2.
 * Patching/Updating and Backing up any content is made easier because you need now change only 1 CDB to update any amount of PDBs within it (vs updating multiple non-CDBs).
 
+Lastly if you have any confusion Oracle offers this cool interactive Mutltitenant Architecture model [here](http://www.oracle.com/webfolder/technetwork/tutorials/obe/db/12c/r1/poster/OUTPUT_poster/poster.html#)
 
 ## SQL/PLSQL
 

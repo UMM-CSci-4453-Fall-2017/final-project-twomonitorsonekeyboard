@@ -9,6 +9,7 @@
 		- [Client Side Tools](#client-side-tools)
 	- [Background](#background)
 		- [OracleDB RDBMS Architecture](#oracledb-rdbms-architecture)
+		- [Database Structure](#database-structure)
 	- [Exploring OracleDB](#exploring-oracledb)
 		- [Creating a User Profile](#creating-a-user-profile)
 		- [Queries](#queries)
@@ -16,7 +17,7 @@
 		- [What is it?](#what-is-it)
 		- [Why use it?](#why-use-it)
 		- [Java in Oracle](#java-in-oracle)
-- [Resources](#resources)
+	- [Resources](#resources)
 
 <!-- /TOC -->
 ## OracleDB: What is it?
@@ -71,7 +72,8 @@ An advantage is that Oracle has so many tools that can interact with it, in this
 
  * Oracle Enterprise Manager Express (EM Express): Web based application that runs and allows you to manage and manipulating the Oracle database and its subcontents(PDB content). One thing to note is the Oracle database must be up and open as you cannot start it from EM Express.
  It can be viewed on https://spacewhale.morris.umn.edu/em/5500
- :fire: This can only be viewed when locally.
+
+ :fire: This can only be viewed locally.
 
  * Sqlplus*: is a command line interface that lets you interact with OracleDB. It is an older tool that has been very reliable... that being said there are so many new IDEs emerging that allow for a
 
@@ -93,12 +95,12 @@ A more in depth explanation can be found by reading this [file](OracleRDBMSArchi
 
 :fire: For a little more fun playing around with this fun interactive Oracle web app by clicking on _Database Architecture_ tab.
 
-<!-- ### Database Structure
+### Database Structure
 Along with Oracle's Archtecture we will explore distinct feature and concepts that are unique to Oracle.
 
 First you'll want to read [this](https://www.red-gate.com/simple-talk/sql/oracle/getting-started-with-oracle-database-12c-multitenant-architecture/) which will provide a nice overview or Multitenant Archecture.
 
-Then you can continue by exploring the [Distinct Features of Oracle file](DistinctFeaturesOfOracle.md) to get more information on it  -->
+Then you can continue by exploring the [Distinct Features of Oracle file](DistinctFeaturesOfOracle.md) to get more information on it
 
 ## Exploring OracleDB
 Now that we have a little background regarding Oracle DB we are ready to dive in! We will begin by first exploring how an Oracle database would be run.
@@ -178,23 +180,51 @@ SQL> GRANT ALL PRIVILEGES TO username;
 
 
 **Create Table 'Class'**
+The CREATE TABLE statement allows you to create and define a table
 ``` SQL
-CREATE TABLE Class(Grade TEXT,Name TEXT,Id INT);
+SQL> CREATE TABLE Class(Grade VARCHAR(2), Name VARCHAR(20), Id Number(10));
 ```
 
 ** Look at the contents of the table 'Class' **
+You can get all the data from a table by using this simple statement
+
+``` SQL
+SQL> select * from Class;
 ```
-select * from Class;
+
+**Insert into 'Class'**
+The INSERT statement allows you to insert values into your table which you specify. Insert 4 rows with the specified information into table Class
+``` SQL
+INSERT INTO Class Values('Grade', 'Name', Id#,);
 ```
 
 **Alter table 'Class'**
+The ALTER TABLE statement allows you to alter a table
+``` SQL
+SQL> ALTER TABLE Class ADD (column_name datatype);
 ```
-ALTER TABLE Class ADD column_name;
+
+**Create a Trigger called Keys**
+Creates a BEFORE statement trigger on table 'Class'. When a user tries to insert a database object, the database fires the trigger **after**  shows the message 'Inserting' after inserted. You can use the BEFORE statement which does a similar functionality. Play around after you create the trigger and try inserting a random row into table Class and see what you get
+```SQL
+SQL> CREATE TRIGGER Keys
+AFTER INSERT ON Class
+BEGIN
+	CASE
+		WHEN INSERTING THEN
+		DBMS_OUTPUT.PUT_LINE('Inserted');
+	END CASE;
+END;
 ```
 
 **Drop table 'Class'**
+The DROP TABLE statement allows you to remove or delete a table from the Oracle database
+``` SQL
+SQL> DROP TABLE schema_name.table_name;
 ```
-DROP TABLE Class;
+or
+``` SQL
+SQL> Drop TABLE Class;
 ```
 
 ## SQL-PL/SQL
@@ -222,7 +252,7 @@ DROP TABLE Class;
  ![alt text](https://docs.oracle.com/cd/E11882_01/server.112/e40540/img/cncpt236.gif "Title")
 
 
-# Resources
+## Resources
 [PL/SQL - Basic Syntax](https://www.tutorialspoint.com/plsql/plsql_basic_syntax.htm)
 
 [PL/SQL - Data Types](https://www.tutorialspoint.com/plsql/plsql_data_types.htm)
