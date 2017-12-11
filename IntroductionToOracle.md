@@ -10,13 +10,13 @@
 	- [Background](#background)
 		- [OracleDB RDBMS Architecture](#oracledb-rdbms-architecture)
 	- [Exploring OracleDB](#exploring-oracledb)
-		- [Database Structure](#database-structure)
+		- [Creating a User Profile](#creating-a-user-profile)
 		- [Queries](#queries)
-		- [Creating a user Profile](#creating-a-user-profile)
-	- [SQL/PLSQL](#sqlplsql)
+	- [SQL-PL/SQL](#sql-plsql)
 		- [What is it?](#what-is-it)
-		- [Example](#example)
-	- [Resources](#resources)
+		- [Why use it?](#why-use-it)
+		- [Java in Oracle](#java-in-oracle)
+- [Resources](#resources)
 
 <!-- /TOC -->
 ## OracleDB: What is it?
@@ -34,7 +34,9 @@ In this Repository there will be reference guides as well as development tools t
 
 * _DistinctFeaturesOfOracle.md_: explores two big aspects of OracleDB.
 
-* _MariaDB_VS_OracleDB_
+* MariaDB\_VS\_OracleDB: gives a brief over of the differences between what it sounds like.
+
+* _DBASetUpGuide_: contains an explanation of what it took to set up the 'behind the scenes' of using our Oracle database.
 
 
 ### How to Connect
@@ -59,38 +61,44 @@ SQLcl: Release 12.2.0.1.0 RC on Sun Dec 10 18:02:34 2017
 
 Copyright (c) 1982, 2017, Oracle.  All rights reserved.
 
-
 SQL>
 ```
 
 Note: Throughout this file we are going to be using the ***sqlcl.sh*** file but you are free to choose any other client side to interact with the database.
 
 ### Client Side Tools
-An advantage is that Oracle has so many tools that can interact with it, in this repostitory we are going to be only using the command tools of sqlplus and sql Cl but others include:
+An advantage is that Oracle has so many tools that can interact with it, in this repository we are going to be only using the command tools of SQLplus* and SQLcl but here is a brief overview of some of them:
 
- * Oracle Enterprise Manager:
+ * Oracle Enterprise Manager Express (EM Express): Web based application that runs and allows you to manage and manipulating the Oracle database and its subcontents(PDB content). One thing to note is the Oracle database must be up and open as you cannot start it from EM Express.
+ It can be viewed on https://spacewhale.morris.umn.edu/em/5500
+ :fire: This can only be viewed when locally.
 
- * SqlPlus*
+ * Sqlplus*: is a command line interface that lets you interact with OracleDB. It is an older tool that has been very reliable... that being said there are so many new IDEs emerging that allow for a
 
- * SQLcl:
+ * SQLcl: is a newish developed command line interface that allows for more flexibility than its parent SQLplus*
 
- * SQL Developer:
+ * SQL Developer: is a another GUI application that comes by default with installation of OracleDB. It supports both SQL and PL/SQL languages and provides a very clean UI for developing. A very cool development tool.
 
 ## Background
 OracleDB is an RDMBS that is very useful for retrieving data so that applications can manipulate it. Oracle Extends Object relational model  which means that it allows for such features such as user-defined types, inheritance and polymorphism. Oracle uses SQL (the structured query language) to interact with the database as well as PL/SQL that we will discuss later.
 
-Read this link to get a quick overview of OracleDB [here]().
+Read this link to get a quick overview of OracleDB [here](https://docs.oracle.com/database/122/CNCPT/introduction-to-oracle-database.htm#CNCPT958).
 
 Below you will read more about the distinct features that OracleDB implements as well as the structure behind it.
 
 ### OracleDB RDBMS Architecture
 The Oracle DB 12c release 2 Architecture is very unique in how it processes information as well the multiple processes it that need interaction to run the database.
 
-A more in depth explanation can be found by reading this [file](OracleRDBMSArchitecture.md) found [()]
+A more in depth explanation can be found by reading this [file](OracleRDBMSArchitecture.md).
 
 :fire: For a little more fun playing around with this fun interactive Oracle web app by clicking on _Database Architecture_ tab.
 
-### Database Structure
+<!-- ### Database Structure
+Along with Oracle's Archtecture we will explore distinct feature and concepts that are unique to Oracle.
+
+First you'll want to read [this](https://www.red-gate.com/simple-talk/sql/oracle/getting-started-with-oracle-database-12c-multitenant-architecture/) which will provide a nice overview or Multitenant Archecture.
+
+Then you can continue by exploring the [Distinct Features of Oracle file](DistinctFeaturesOfOracle.md) to get more information on it  -->
 
 ## Exploring OracleDB
 Now that we have a little background regarding Oracle DB we are ready to dive in! We will begin by first exploring how an Oracle database would be run.
@@ -163,38 +171,38 @@ The thing with privileges especially in Oracle is you have to be careful with wh
 For now we will just adjust your privileges with:
 
 ```SQL
-> TODO
+SQL> GRANT ALL PRIVILEGES TO username;
 ```
 
 ### Queries
 
 
-##### Create Table 'Class'
-```
+**Create Table 'Class'**
+``` SQL
 CREATE TABLE Class(Grade TEXT,Name TEXT,Id INT);
 ```
 
-##### Look at the contents of the table 'Class'
+** Look at the contents of the table 'Class' **
 ```
 select * from Class;
 ```
 
-##### Alter table 'Class'
+**Alter table 'Class'**
 ```
 ALTER TABLE Class ADD column_name;
 ```
 
-##### Drop table 'Class'
+**Drop table 'Class'**
 ```
 DROP TABLE Class;
 ```
 
-# SQL-PL/SQL
+## SQL-PL/SQL
 
-#### What is it?
+### What is it?
  * PL/SQL is Oracle's extension of SQL. PL/SQL is a procedural language that includes elements such as conditions, loops, variables, functions, and etc.   
 
-#### Why use it?
+### Why use it?
 * Better performance - PL/SQL allows you to group SQL statements logically and send them as a block
 
 ![alt text]( https://github.com/UMM-CSci-4453-Fall-2017/final-project-twomonitorsonekeyboard/blob/master/images/plsql.png?raw=true"Title")
@@ -207,14 +215,14 @@ DROP TABLE Class;
 ![alt text](https://docstore.mik.ua/orelly/oracle/prog2/figs/sql2.1502.gif "Logo Title Text 1")
 
 
-## Java in Oracle
+### Java in Oracle
  ###### Overview of Java
  * The database provides Java programs with a dynamic data-processing engine. Client requests are assembled as data queries for fast processing. Query results are generated dynamically.
 
  ![alt text](https://docs.oracle.com/cd/E11882_01/server.112/e40540/img/cncpt236.gif "Title")
 
 
-## Resources
+# Resources
 [PL/SQL - Basic Syntax](https://www.tutorialspoint.com/plsql/plsql_basic_syntax.htm)
 
 [PL/SQL - Data Types](https://www.tutorialspoint.com/plsql/plsql_data_types.htm)
