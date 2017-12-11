@@ -95,7 +95,7 @@ DROP TABLE Class;
 #### Why use it?
 * Better performance - PL/SQL allows you to group SQL statements logically and send them as a block
 
-![alt text](/home/sphat001/Databases/final-project-twomonitorsonekeyboard/images/plsql.png "Title")
+![alt text]( https://github.com/UMM-CSci-4453-Fall-2017/final-project-twomonitorsonekeyboard/blob/master/images/plsql.png?raw=true"Title")
 
 * If you enjoy using SQL and want to learn a super-set language of it.
 * If you wanted to write a full program. (loops,variables, and etc.)
