@@ -168,25 +168,51 @@ For now we will just adjust your privileges with:
 
 ### Queries
 
-
 ##### Create Table 'Class'
+The CREATE TABLE statement allows you to create and define a table
 ```
-CREATE TABLE Class(Grade TEXT,Name TEXT,Id INT);
+CREATE TABLE Class(Grade VARCHAR(2), Name VARCHAR(20), Id Number(10));
 ```
 
 ##### Look at the contents of the table 'Class'
+You can get all the data from a table by using this simple statement
 ```
 select * from Class;
 ```
 
-##### Alter table 'Class'
+#### Insert into 'Class'
+The INSERT statement allows you to insert values into your table which you specify. Insert 4 rows with the specified information into table Class
 ```
-ALTER TABLE Class ADD column_name;
+INSERT INTO Class Values('Grade', 'Name', Id#,);
+```
+
+##### Alter table 'Class'
+The ALTER TABLE statement allows you to alter a table
+```
+ALTER TABLE Class ADD (column_name datatype);
+```
+
+#### Create a Trigger called Keys
+Creates a BEFORE statement trigger on table 'Class'. When a user tries to insert a database object, the database fires the trigger **after**  shows the message 'Inserting' after inserted. You can use the BEFORE statement which does a similar functionality. Play around after you create the trigger and try inserting a random row into table Class and see what you get
+```
+CREATE TRIGGER Keys
+AFTER INSERT ON Class
+BEGIN
+	CASE
+		WHEN INSERTING THEN
+		DBMS_OUTPUT.PUT_LINE('Inserted');
+	END CASE;
+END;
 ```
 
 ##### Drop table 'Class'
+The DROP TABLE statement allows you to remove or delete a table from the Oracle database
 ```
-DROP TABLE Class;
+DROP TABLE schema_name.table_name;
+
+or
+
+Drop TABLE Class;
 ```
 
 # SQL-PL/SQL
