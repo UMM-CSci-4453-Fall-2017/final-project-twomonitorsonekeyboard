@@ -30,10 +30,10 @@ We will explore the some elements of the figure above.
   Overview of the SGA:
 
   The **SGA(System Global Area)** along with Oracle background processes, form an Oracle
-    database instance. Each database instance has its own SGA. The SGA consists of
-    several memory components known as "SGA components". These components contain data
-    (such as cached data blocks and shared SQL areas) and they also control the information
-    for its database instance. Every server and background processes share the SGA.
+    database instance. Oracle processes running on the same computer share the same SGA.
+    The SGA consists of several memory components known as "SGA components".
+    These components contain data (such as cached data blocks and shared SQL areas)
+    and they also control the information for its database instance.
 
 The important SGA components:
 
