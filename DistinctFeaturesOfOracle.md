@@ -7,7 +7,7 @@ In this file we are going to go in depth into some of the features that make Ora
 Multitenant Architecture is the idea of having a Container Database(CDBs) with sub databases called Pluggable databases(PDBs). What
 does this exactly mean? It means that a container database will be allowed to contain anywhere from 0 to n PDBs. Well what in the world is a PDB though? A PDB is a portable collection of schemas<sup>[1](#schema)</sup>, schema objects<sup>[1](#schema)</sup> and non-schema objects<sup>[1](#schema)</sup>
 
-![](/images/Oracle12cMultitenant.png)
+![](/images/MultitenantArchitecture12c.jpg)
 
 *Figure 1: Displays the Multitenant Architecture explained by Oracle*
 
