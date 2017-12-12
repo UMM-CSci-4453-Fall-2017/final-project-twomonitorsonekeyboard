@@ -21,6 +21,7 @@
 * Open Source
 * Support for JSON datatype
 * More user friendly
+* Cheaper (Free actually)
 
 ## Advantages of OracleDB
 
@@ -30,6 +31,7 @@
 * Allows for more in depth server-side through PL/SQL and Java
 * Flashback technology
 * Better performance with extremely large amounts of data
+* Flexibility through CDB and PDB functionality
 
 ## Technical differences
 ### Datatypes unique to each system
@@ -87,3 +89,5 @@
 # Why would one choose OracleDB over MariaDB
 * Better for large companies with lots of resources to utilize (grid computing)
 * More server-side flexibility
+* OracleDB's unique system of PDBs inside of CDBs makes it much more simple to move databases around from one place to another by unplugging the PDB from it's current CDB and moving it to a different one
+* Flashback technology is potentially invaluable for large companies. MariaDB has some similar features but they are no where near as fully realized as OracleDB's
