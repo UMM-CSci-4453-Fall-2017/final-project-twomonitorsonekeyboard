@@ -20,6 +20,7 @@
 
 * Open Source
 * Support for JSON datatype
+* More user friendly
 
 ## Advantages of OracleDB
 
@@ -27,6 +28,9 @@
 * Robust security compared to MariaDB
 * Pooling allows companies with a large number of components to really take advantage of them
 * Allows for more in depth server-side through PL/SQL and Java
+* Flashback technology
+* Better performance with extremely large amounts of data
+
 ## Technical differences
 ### Datatypes unique to each system
 #### Maraidb
