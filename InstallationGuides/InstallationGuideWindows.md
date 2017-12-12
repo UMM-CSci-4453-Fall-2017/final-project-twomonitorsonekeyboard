@@ -17,45 +17,58 @@ _/database/setup.exe_ and click on it you will be prompted
 
 Respond yes and let the installation process begin.
 
-### Step 1:
-Configure Security Updates
+### Step 1: Configure Security Updates
+
 ![](/InstallationGuides/images/Windows/WindowsStep1.jpg)
 
 * Enter your _email_ and your _Oracle Support Password_.
 
-Note troubles that occurred for us was that it didn't accept our email but registers you if you enter it incorrect 3 times. 
+Note troubles that occurred for us was that it didn't accept our email but registers you if you enter it incorrect 3 times.
 
-### Step 2
+### Step 2: Select Installation Option
 ![](/InstallationGuides/images/Windows/WindowsStep2.jpg)
 
+* Select to make a new a database and have it configured.
 
-### Step 3
+### Step 3: Select System Class
 
 ![](/InstallationGuides/images/Windows/WindowsStep3.jpg)
 
-### Step 4
+* Since we were installing on a laptop we chose this option one but this changed on the linux environent.  
+
+
+### Step 4: Oracle Home user
 
 ![](/InstallationGuides/images/Windows/WindowsStep4.jpg)
 
-### Step 5
+* Choose virtual account as recommended
+
+### Step 5: Typical Install Configuration  
 
 ![](/InstallationGuides/images/Windows/WindowsStep5.jpg)
 
-### Step 6
+* This is where you will create where your instance of your database will be stored as well as choosing a Container database,a  Pluggable database, and its password.
+
+### Step 6: Perform Prerequisite Checks
 
 ![](/InstallationGuides/images/Windows/WindowsStep6.jpg)
 
-### Step 7
+* This is where Oracle will run its checks to make sure you have enough space and memory for the database.
+
+### Step 7: Summary
 
 ![](/InstallationGuides/images/Windows/WindowsStep7.jpg)
 
-### Step 8
+* Returns a sort of 'Receipt' of what just occurred, pre installation.
+### Step 8: Install Product
 
 ![](/InstallationGuides/images/Windows/WindowsStep8pre.jpg)
 
-### Step 9
+### Step 9: Finish
 
 ![](/InstallationGuides/images/Windows/WindowsStep9.jpg)
+
+**Huzzah! OracleDB has been installed. You can now click close and start exploring it using any client-side tool of your choice. Going to https://localhost:5500/em will route you to _Oracle Enterprise Manager Express (EM Express)_ but you will need to start the Database from an outside tool**
 
 
 
