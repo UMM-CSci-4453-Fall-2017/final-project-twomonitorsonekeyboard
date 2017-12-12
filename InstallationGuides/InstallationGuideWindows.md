@@ -19,39 +19,40 @@ Respond yes and let the installation process begin.
 
 ### Step 1: Configure Security Updates
 
-![](/InstallationGuides/images/Windows/WindowsStep1.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep1.JPG)
 
 * Enter your _email_ and your _Oracle Support Password_.
 
 Note troubles that occurred for us was that it didn't accept our email but registers you if you enter it incorrect 3 times.
 
 ### Step 2: Select Installation Option
-![](/InstallationGuides/images/Windows/WindowsStep2.jpg)
+
+![](/InstallationGuides/images/Windows/WindowsStep2.JPG)
 
 * Select to make a new a database and have it configured.
 
 ### Step 3: Select System Class
 
-![](/InstallationGuides/images/Windows/WindowsStep3.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep3.JPG)
 
 * Since we were installing on a laptop we chose this option one but this changed on the linux environent.  
 
 
 ### Step 4: Oracle Home user
 
-![](/InstallationGuides/images/Windows/WindowsStep4.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep4.JPG)
 
 * Choose virtual account as recommended
 
 ### Step 5: Typical Install Configuration  
 
-![](/InstallationGuides/images/Windows/WindowsStep5.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep5.JPG)
 
 * This is where you will create where your instance of your database will be stored as well as choosing a Container database,a  Pluggable database, and its password.
 
 ### Step 6: Perform Prerequisite Checks
 
-![](/InstallationGuides/images/Windows/WindowsStep6.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep6.JPG)
 
 * This is where Oracle will run its checks to make sure you have enough space and memory for the database.
 
