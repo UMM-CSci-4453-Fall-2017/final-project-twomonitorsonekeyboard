@@ -10,6 +10,7 @@
 	- [Background](#background)
 		- [OracleDB RDBMS Architecture](#oracledb-rdbms-architecture)
 		- [Database Structure](#database-structure)
+		- [Local Users vs Common Users](#local-user-vs-common-user)
 	- [Exploring OracleDB](#exploring-oracledb)
 		- [Creating a User Profile](#creating-a-user-profile)
 		- [Queries](#queries)
@@ -35,7 +36,7 @@ In this Repository there will be reference guides as well as development tools t
 
 * _DistinctFeaturesOfOracle.md_: explores two big aspects of OracleDB.
 
-* MariaDB\_VS\_OracleDB: gives a brief over of the differences between what it sounds like.
+* _mariadbVSoracledb_: gives a brief over of the differences between what it sounds like.
 
 * _DBASetUpGuide_: contains an explanation of what it took to set up the 'behind the scenes' of using our Oracle database.
 
@@ -70,19 +71,18 @@ Note: Throughout this file we are going to be using the ***sqlcl.sh*** file but 
 ### Client Side Tools
 An advantage is that Oracle has so many tools that can interact with it, in this repository we are going to be only using the command tools of SQLplus* and SQLcl but here is a brief overview of some of them:
 
- * Oracle Enterprise Manager Express (EM Express): Web based application that runs and allows you to manage and manipulating the Oracle database and its subcontents(PDB content). One thing to note is the Oracle database must be up and open as you cannot start it from EM Express.
+ * _Oracle Enterprise Manager Express (EM Express)_: Web based application that runs and allows you to manage and manipulating the Oracle database and its subcontents(PDB content). One thing to note is the Oracle database must be up and open as you cannot start it from EM Express.
  It can be viewed on https://spacewhale.morris.umn.edu/em/5500
+>:fire: This option can only be viewed locally or if the firewall is down.
 
- :fire: This can only be viewed locally.
+ * _Sqlplus*_: is a command line interface that lets you interact with OracleDB. It is an older tool that has been very reliable... that being said there are so many new IDEs emerging that allow for easier UI manipulation of the database.
 
- * Sqlplus*: is a command line interface that lets you interact with OracleDB. It is an older tool that has been very reliable... that being said there are so many new IDEs emerging that allow for a
+ * _SQLcl_: is a newish developed command line interface that allows for more flexibility than its parent SQLplus*.
 
- * SQLcl: is a newish developed command line interface that allows for more flexibility than its parent SQLplus*
-
- * SQL Developer: is a another GUI application that comes by default with installation of OracleDB. It supports both SQL and PL/SQL languages and provides a very clean UI for developing. A very cool development tool.
+ * _SQL Developer_: is a another GUI application that comes by default with installation of OracleDB. It supports both SQL and PL/SQL languages and provides a very clean UI for developing. A very cool development tool.
 
 ## Background
-OracleDB is an RDMBS that is very useful for retrieving data so that applications can manipulate it. Oracle Extends Object relational model  which means that it allows for such features such as user-defined types, inheritance and polymorphism. Oracle uses SQL (the structured query language) to interact with the database as well as PL/SQL that we will discuss later.
+OracleDB is an RDMBS that is very useful for retrieving data so that applications can manipulate it. Oracle extends the Object relational model  which means that it allows for such features such as user-defined types, inheritance and polymorphism. Oracle uses SQL (the structured query language) to interact with the database as well as PL/SQL that we will discuss later.
 
 Read this link to get a quick overview of OracleDB [here](https://docs.oracle.com/database/122/CNCPT/introduction-to-oracle-database.htm#CNCPT958).
 
@@ -93,14 +93,27 @@ The Oracle DB 12c release 2 Architecture is very unique in how it processes info
 
 A more in depth explanation can be found by reading this [file](OracleRDBMSArchitecture.md).
 
-:fire: For a little more fun playing around with this fun interactive Oracle web app by clicking on _Database Architecture_ tab.
+:fire: For a little more fun play around with this fun interactive Oracle web app by clicking on _Database Architecture_ tab.
 
 ### Database Structure
 Along with Oracle's Archtecture we will explore distinct feature and concepts that are unique to Oracle.
 
 First you'll want to read [this](https://www.red-gate.com/simple-talk/sql/oracle/getting-started-with-oracle-database-12c-multitenant-architecture/) which will provide a nice overview or Multitenant Archecture.
 
-Then you can continue by exploring the [Distinct Features of Oracle file](DistinctFeaturesOfOracle.md) to get more information on it
+Then you can continue by exploring the [Distinct Features of Oracle file](DistinctFeaturesOfOracle.md) to get more information on it.
+
+### Local Users vs Common Users
+Another important feature of OracleDB's Multitenant Architecture is that there can be two types of users.
+
+* **Common Users**: These are users that exist in both the CDB(root) and all PDBs.
+	* When creating this type of User it must be prefixed with "C##" or "c##"
+	* The username chosen must be unique across all containers.
+
+
+* **Local Users**: These are users that exist in only specific PDBs
+	* Usernames can be the same across different PDBs but unique within their specific PDB;
+
+You can read about users [here](https://docs.oracle.com/database/121/SQLRF/statements_8003.htm#SQLRF01503) if you want more background.
 
 ## Exploring OracleDB
 Now that we have a little background regarding Oracle DB we are ready to dive in! We will begin by first exploring how an Oracle database would be run.
@@ -146,6 +159,7 @@ SQL> select * from all_users;
 *** output ***
 
 ```
+
 ### Creating a User Profile
 Now were ready to create a user profile for yourself!
 First make sure you're still in **MMK_ADMIN** and the **test** PDB by typing in
@@ -204,7 +218,7 @@ The ALTER TABLE statement allows you to alter a table
 SQL> ALTER TABLE Class ADD (column_name datatype);
 ```
 
-**Create a Trigger called Keys**
+**Create a Trigger called Keys**######
 Creates a BEFORE statement trigger on table 'Class'. When a user tries to insert a database object, the database fires the trigger **after**  shows the message 'Inserting' after inserted. You can use the BEFORE statement which does a similar functionality. Play around after you create the trigger and try inserting a random row into table Class and see what you get
 ```SQL
 SQL> CREATE TRIGGER Keys
@@ -246,13 +260,16 @@ SQL> Drop TABLE Class;
 
 
 ### Java in Oracle
- ###### Overview of Java
+ **Overview of Java**
  * The database provides Java programs with a dynamic data-processing engine. Client requests are assembled as data queries for fast processing. Query results are generated dynamically.
 
  ![alt text](https://docs.oracle.com/cd/E11882_01/server.112/e40540/img/cncpt236.gif "Title")
 
 
 ## Resources
+[OracleDB 12c Concepts](https://docs.oracle.com/database/122/CNCPT/toc.htm)
+
+
 [PL/SQL - Basic Syntax](https://www.tutorialspoint.com/plsql/plsql_basic_syntax.htm)
 
 [PL/SQL - Data Types](https://www.tutorialspoint.com/plsql/plsql_data_types.htm)
