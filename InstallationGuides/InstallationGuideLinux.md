@@ -1,5 +1,5 @@
-# Oracle DB Installation (Windows)
-**This is a reference guide to installing as well as how we installed OracleDB on both a linux and Windows Environment. This document explores the Windows Environment**
+# Oracle DB Installation (Linux)
+**This is a reference guide to installing as well as how we installed OracleDB on both a linux and Windows Environment. This document explores the Linux Environment**
 
 ### Prequisites:
 * We needed root permission to lab computers when installing because of some files that need to be modified are in the _/etc/_ folder.
@@ -126,8 +126,8 @@ Huzzah! You will now be prompted to download OracleDB. You can igonre the warnin
 
 ***The steps are very similar to that in the [Installation Guide for Windows](/InstallationGuides/InstallationGuideWindows.md) except for on steps where it will prompt you to run scripts.***
 
-![](/InstallationGuides/Linux/Configuration.jpg)
+![](/InstallationGuides/images/Linux/Configuration.jpg)
 
 *Screen you see after everything is installed*
 
-![](/InstallationGuides/Linux/Finish)
+![](/InstallationGuides/images/Linux/Finish.jpg)

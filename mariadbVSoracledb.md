@@ -73,9 +73,8 @@
 |MariaDB | OracleDB|
 |--------|---------|
 |CHAR(x) | CHAR(x) |
-|VARCHAR(x)| ARCHAR2(x)|
 |VARCHAR(MAX)|CLOB|
-|TEXT|LONG|
+|TEXT|VARCHAR(x)|
 #### Binary Strings
 
 |MariaDB | OracleDB|
