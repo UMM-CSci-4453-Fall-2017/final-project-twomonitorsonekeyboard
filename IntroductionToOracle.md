@@ -10,7 +10,7 @@
 	- [Background](#background)
 		- [OracleDB RDBMS Architecture](#oracledb-rdbms-architecture)
 		- [Database Structure](#database-structure)
-		- [Local Users vs Common Users](#local-user-vs-common-user)
+		- [Local Users vs Common Users](#local-users-vs-common-users)
 	- [Exploring OracleDB](#exploring-oracledb)
 		- [Creating a User Profile](#creating-a-user-profile)
 		- [Queries](#queries)
@@ -28,9 +28,9 @@ Oracle DB is widely used RDBMS(relational database managment system) used around
 ## Files Located in this Repo
 In this Repository there will be reference guides as well as development tools to be used for Oracle DB.
 
-* _InstallationGuides/_: contains two guides on how to install Oracle DB on both a Windows and Linux Environment. These files contain more details about pre-requisites, specifications and how to's.
+* _InstallationGuides/_ : contains two guides on how to install Oracle DB on both a Windows and Linux Environment. These files contain more details about pre-requisites, specifications and how to's.
 
-* _SQLDevTools/_: contains client side tools to connect to the instance our our Oracle database.
+* _SQLDevTools/_ : contains client side tools to connect to the instance our our Oracle database.
 
 * _OracleRDBMSArchitecture.md_: contains an in-depth explanation behind the OracleDB Architecture as whole RDBMS.
 
@@ -267,11 +267,14 @@ SQL> Drop TABLE Class;
 
 
 ## Resources
-[OracleDB 12c Concepts](https://docs.oracle.com/database/122/CNCPT/toc.htm)
+[OracleDB 12c Concepts](https://docs.oracle.com/database/122/CNCPT/toc.htm): Concepts of OracleDB 12c
 
+[OracleDB Developer Guide](https://docs.oracle.com/database/121/ADFNS/title.htm): Useful commands for when connected to OracleDB
 
-[PL/SQL - Basic Syntax](https://www.tutorialspoint.com/plsql/plsql_basic_syntax.htm)
+[OracleDB Data Types](https://docs.oracle.com/database/121/SQLRF/sql_elements001.htm#SQLRF0021): Data types explained and which ones you can use
 
-[PL/SQL - Data Types](https://www.tutorialspoint.com/plsql/plsql_data_types.htm)
+[PL/SQL - Basic Syntax](https://www.tutorialspoint.com/plsql/plsql_basic_syntax.htm): Syntax explained
 
-[PL/SQL - Overview](https://www.tutorialspoint.com/plsql/plsql_overview.htm)
+[PL/SQL - Data Types](https://www.tutorialspoint.com/plsql/plsql_data_types.htm):  Data types used in PL/SQL
+
+[PL/SQL - Overview](https://www.tutorialspoint.com/plsql/plsql_overview.htm): Brief Overview of PL/SQL

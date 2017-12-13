@@ -102,29 +102,29 @@ Types of Oracle processes:
 **Background Processes**:
 Get created along with the database instance and performs maintenance tasks such as:
   * Performing instance recovery
-  2. Cleaning up processes
-  3. Writing redo buffers to disk
-  4. Maximize performance for multiple users
+  * Cleaning up processes
+  * Writing redo buffers to disk
+  * Maximize performance for multiple users
 
 Mandatory Background Processes: Present in all typical types of database configurations. These processes run by default in any database instance. Here are some of the more important Mandatory Processes:
   * _PMON (Process Monitor Processes)_: Monitors other processes and performs process recovery when a server or dispatcher process terminates abnormally
   * _LREG (Listener Registration Process)_: Registers information about the database instance and dispatcher processes with the Oracle Net Listener
-  3. _SMON (System Monitor Process)_: In charge of a variety of system-level cleanup duties
-  4. _DBW (Database Writer Process)_:Writes the contents of database buffers to data files.
-  5. _LGWR (Log Writer Process)_: Manages the online redo log buffer.
-  6. _CKPT (Checkpoint Process)_: Updates the control file and data file headers with Checkpoint information and signals DBW to write blocks to disk
-  7. _RECO (Recoverer Process)_:Automatically resolves failures in distributes transactions.
+  * _SMON (System Monitor Process)_: In charge of a variety of system-level cleanup duties
+  * _DBW (Database Writer Process)_:Writes the contents of database buffers to data files.
+  * _LGWR (Log Writer Process)_: Manages the online redo log buffer.
+  * _CKPT (Checkpoint Process)_: Updates the control file and data file headers with Checkpoint information and signals DBW to write blocks to disk
+  * _RECO (Recoverer Process)_:Automatically resolves failures in distributes transactions.
 
 **Optional Background Processes**:
 Processes that aren't mandatory. Most Optional Background Processes are for specific tasks or features. Here are some common background processes:
   * _ARCn (Archiver Processes)_
-  2. _CJQ0 and JNNN (Job Queue Processes)_
-  3. _FBDA (Flashback Data Archive PRocess)_
-  4. _SMCO (Space Management Coordinator Process)_
+  * _CJQ0 and JNNN (Job Queue Processes)_
+  * _FBDA (Flashback Data Archive PRocess)_
+  * _SMCO (Space Management Coordinator Process)_
 
 **Server Processes**:
 Oracle databases create these to run commands issued by the clients.These processes include:
   * Parsing and running SQL statements issued through the application,
-  2. Execute PL/SQL code
-  3. Read data blocks from data files into the database buffer cache
-  4. Return results in such a way that the application can process the information
+  * Execute PL/SQL code
+  * Read data blocks from data files into the database buffer cache
+  * Return results in such a way that the application can process the information

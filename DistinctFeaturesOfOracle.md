@@ -35,14 +35,23 @@ Read some of the benefits that are produced by it.
 
 Lastly if you have any confusion Oracle offers this cool interactive Mutltitenant Architecture model [here](http://www.oracle.com/webfolder/technetwork/tutorials/obe/db/12c/r1/poster/OUTPUT_poster/poster.html#)
 
-## SQL/PLSQL
+## Pl/SQL and Java
+A unique feature of OracleDB is the way it allows PL/SQL and Java to interact. You can call Java programs using SQL and call SQL in Java programs. This is the Server side programming aspect of Oracle DB. Although we didn't do much exploration of this there are multiple resources online! Here are two:
+
+* [Intro to Java in OracleDB]https://docs.oracle.com/database/121/JJDEV/chone.htm#JJDEV01000)
+
+* [DB Java Dev Guide](https://docs.oracle.com/database/121/JJDEV/toc.htm)
+
+* [Server Side Programming](https://docs.oracle.com/en/database/oracle/oracle-database/12.2/cncpt/server-side-programming.html#GUID-D4A154D2-DF56-45DA-863C-BED5DA6BDA34)
 
 
+<footer>
 <a name="schema">1</a>: See reference Glossary in [works cited][workscited] for definitions [↩](#schema)
 
 <a name="dbc">2</a>: The process of consolidating data from multiple databases into one database on one computer.[↩](#dbc)
 
 <a name="unplug">2</a>: Meaning to close the connection between a pluggable database and its container database[↩](#unplug)
+</footer>
 
 
 [workscited]: (WorksCited.md)
