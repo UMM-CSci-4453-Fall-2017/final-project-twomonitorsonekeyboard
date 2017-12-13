@@ -58,16 +58,16 @@ Note troubles that occurred for us was that it didn't accept our email but regis
 
 ### Step 7: Summary
 
-![](/InstallationGuides/images/Windows/WindowsStep7.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep7.JPG)
 
 * Returns a sort of 'Receipt' of what just occurred, pre installation.
 ### Step 8: Install Product
 
-![](/InstallationGuides/images/Windows/WindowsStep8pre.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep8pre.JPG)
 
 ### Step 9: Finish
 
-![](/InstallationGuides/images/Windows/WindowsStep9.jpg)
+![](/InstallationGuides/images/Windows/WindowsStep9.JPG)
 
 **Huzzah! OracleDB has been installed. You can now click close and start exploring it using any client-side tool of your choice. Going to https://localhost:5500/em will route you to _Oracle Enterprise Manager Express (EM Express)_ but you will need to start the Database from an outside tool**
 
